@@ -114,6 +114,8 @@ describe("🚩 Challenge 3: 🎲 Dice Game", function () {
       //deployer is the owner by default so should be able to withdraw
       await fundRiggedContract();
 
+      console.log("deployer: ", deployer);
+      
       let prevBalance = await deployer.getBalance();
       await riggedRoll.withdraw(
         deployer.address,
