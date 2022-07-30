@@ -31,7 +31,7 @@ contract RiggedRoll is Ownable {
         );
         uint256 roll = uint256(hash) % 16;
 
-        if (roll < 2) {
+        if (roll <= 2) {
             // Success roll
             diceGame.rollTheDice{value: 0.002 ether}();
             console.log("Success roll", roll);
