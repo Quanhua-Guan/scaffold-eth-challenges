@@ -45,7 +45,7 @@ describe("🚩 Challenge 3: 🎲 Dice Game", function () {
 
       let bigNum = BigNumber.from(hash);
       expectedRoll = bigNum.mod(16);
-      if (expectedRoll.lt(2) == getRollLessThanTwo) {
+      if (expectedRoll.lte(2) == getRollLessThanTwo) {
         break;
       }
 
