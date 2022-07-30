@@ -1,7 +1,7 @@
 pragma solidity >=0.8.0 <0.9.0;
 //SPDX-License-Identifier: MIT
 
-import "hardhat/console.sol";
+//import "hardhat/console.sol";
 import "./DiceGame.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
@@ -34,9 +34,9 @@ contract RiggedRoll is Ownable {
         if (roll <= 2) {
             // Success roll
             diceGame.rollTheDice{value: 0.002 ether}();
-            console.log("Success roll", roll);
+            // console.log("Success roll", roll);
         } else {
-            console.log("Fail roll", roll);
+            // console.log("Fail roll", roll);
             require(false, "Fail roll, reverted");
         }
     }
